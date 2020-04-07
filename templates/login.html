@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table width="100%" cellspacing="0" cellpadding="0">
+<td class="leftcol"><img src="static/img/MARS.png" alt=""></td>
+<td valign="top">
+    <h1>Аварийный доступ</h1></td></table>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.username_astr.label }}<br>
+        {{ form.username_astr(class="form-control") }}<br>
+        {% for error in form.username_astr.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+        {{ form.password_astr.label }}<br>
+        {{ form.password_astr(class="form-control", type="password") }}<br>
+        {% for error in form.password_astr.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+    {{ form.username_kap.label }}<br>
+    {{ form.username_kap(class="form-control") }}<br>
+    {% for error in form.username_kap.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+    {{ form.password_kap.label }}<br>
+    {{ form.password_kap(class="form-control", type="password") }}<br>
+    {% for error in form.password_kap.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+    {{ form.submit(type="submit", class="btn btn-primary") }}</p>
+</form>
+{% endblock %}

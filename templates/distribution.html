@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Размещение по каютам</h2>
+{% set number = 'Каюта №' %}
+{% for i in list_data %}
+    {% if loop.first %}<h4>{{i}} - {{number}} {{loop.index}} - капитан корабля</h4>
+    {% else %}<h4>{{i}} - {{number}} {{loop.index}}</h4>
+    {% endif %}
+{% endfor %}
+{% endblock %}

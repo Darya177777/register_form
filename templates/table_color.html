@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Оформление каюты</h2>
+<table border="1" bgcolor="#dddddd" height="300" width="400">
+    <tr height="25">
+        <td align="center">Цвет стен</td>
+        <td align="center">Эмблема</td>
+    </tr>
+    <tr>{% if years < 21 and sex == 'female' %}
+        <td bgcolor="#ff5555"> </td>
+        {% elif years < 21 and sex == 'male' %}
+        <td bgcolor="#7777ff"> </td>
+        {% elif years >= 21 and sex == 'female' %}
+        <td bgcolor="#ff3333"> </td>
+        {% else %}
+        <td bgcolor="#1111ff"> </td>
+        {% endif %}
+        {% if years < 21 %}
+        <td background={{image1}}> </td>
+        {% else %}
+        <td background={{image2}}> </td>
+        {% endif %}
+    </tr>
+</table>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{dict_data['title']}}</h1>
+<h5>И на марсе яблони будут цвести</h5>
+<h4>Фамилия: {{dict_data['surname']}}</h4>
+<h4>Имя: {{dict_data['name']}}</h4>
+<h4>Образование: {{dict_data['education']}}</h4>
+<h4>Профессия: {{dict_data['profession']}}</h4>
+<h4>Пол: {{dict_data['sex']}}</h4>
+<h4>Мотивация: {{dict_data['motivation']}}</h4>
+<h4>Готовы остаться на Марсе? {{dict_data['ready']}}</h4>
+{% endblock %}
